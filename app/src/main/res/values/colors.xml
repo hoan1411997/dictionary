@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorPrimary">#263238</color>
+    <color name="colortextgreen">#263238</color>
+    <color name="colorPrimaryDark">#263238</color>
+    <color name="colorAccent">#4A90E2</color>
+    <color name="colorBGCertified">#4fc3f7</color>
+    <color name="tabTextColor">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="color_bg_text_1">#4A90E2</color>
+    <color name="color_bg_text_2">#cfcfcf</color>
+    <color name="bg_rscv">#F5F5F5</color>
+    <color name="grey500">#9e9e9e</color>
+    <color name="grey800">#424242</color>
+    <color name="grey200">#eeeeee</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="red_fail">#EE696E</color>
+    <color name="green_suc">#56b9ff</color>
+    <color name="red_500">#f44336</color>
+    <color name="yellow">#ffab40</color>
+
+    <color name="QRCodeBlackColor">#000</color>
+    <color name="QRCodeWhiteColor">#fff</color>
+
+    <color name="deep_purple_400">#7e57c2</color>
+
 </resources>
