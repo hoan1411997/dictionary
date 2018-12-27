@@ -18,7 +18,22 @@ public class VocabularyType {
     @Expose
     public String desc;
 
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
     public VocabularyType() {
+    }
+
+    public VocabularyType(Integer id, String code, String name, String desc) {
+        this.id = id;
+        this.code = code;
+        this.name = name;
+        this.desc = desc;
     }
 
     public Integer getId() {
@@ -43,5 +58,15 @@ public class VocabularyType {
 
     public void setDesc(String desc) {
         this.desc = desc;
+    }
+
+    @Override
+    public String toString() {
+        return "{" +
+                "id:" + id +
+                ", code:'" + code +
+                ", name:'" + name +
+                ", desc:'" + desc +
+                '}';
     }
 }

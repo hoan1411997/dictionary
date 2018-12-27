@@ -6,28 +6,19 @@ import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.graphics.Bitmap;
 import android.location.LocationManager;
-import android.util.Log;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
-
 
 import com.google.gson.Gson;
 import com.khanh.dictionary.ApplicationContextSingleton;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.json.JSONTokener;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
 
 /**
  * Created by HP on 8/10/2017.
@@ -69,7 +60,6 @@ public class Util {
     }
 
 
-
     public static void showMessenger(String string, Context context) {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
@@ -88,7 +78,6 @@ public class Util {
     }
 
 
-
     public static String creatFileName(String format) {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyMMdd_hhmss_aaa");
         String fileName = simpleDateFormat.format(System.currentTimeMillis()) + format;
@@ -104,14 +93,11 @@ public class Util {
     }
 
 
-
-
     public void hideLoadding() {
 
         if (dialog == null) return;
-        if (dialog.isShowing())   dialog.hide();
+        if (dialog.isShowing()) dialog.hide();
     }
-
 
 
     public static boolean isGpsEnable(Context context) {
@@ -142,6 +128,7 @@ public class Util {
     }
 
     public static String toJson(Object o) {
+        if (o == null) return "";
         Gson gson = new Gson();
         String json = gson.toJson(o);
         return json;

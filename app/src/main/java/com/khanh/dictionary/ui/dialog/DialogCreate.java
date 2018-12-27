@@ -6,14 +6,10 @@ import android.content.Context;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.CompoundButton;
 import android.widget.EditText;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import com.khanh.dictionary.R;
@@ -22,6 +18,7 @@ import com.khanh.dictionary.util.Util;
 public class DialogCreate extends Dialog {
     Context context;
     OnClickAccept onClickAccept;
+
 
     public DialogCreate(@NonNull Context context, OnClickAccept onClickAccept) {
 
@@ -52,6 +49,14 @@ public class DialogCreate extends Dialog {
         setCanceledOnTouchOutside(true);
     }
 
+    public void setText(String t1, String t2, String t3) {
+        edt1.setText(t1);
+        edt2.setText(t2);
+        edt3.setText(t3);
+
+
+    }
+
     @Override
     public void show() {
         super.show();
@@ -65,32 +70,8 @@ public class DialogCreate extends Dialog {
     EditText edt2;
     EditText edt3;
 
-    private RadioGroup radioGroup;
-    private RadioButton radioButton1;
-    private RadioButton radioButton2;
 
     private void onclick() {
-        radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
-        radioButton1 = (RadioButton) findViewById(R.id.radioButton_1);
-        radioButton2 = (RadioButton) findViewById(R.id.radioButton_2);
-
-        this.radioButton1.setOnCheckedChangeListener(new RadioButton.OnCheckedChangeListener() {
-
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                doOnGameCharacterChanged(buttonView, isChecked);
-            }
-        });
-
-
-        // Khi radio button "Male" có thay đổi.
-        this.radioButton2.setOnCheckedChangeListener(new RadioButton.OnCheckedChangeListener() {
-
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                doOnGameCharacterChanged(buttonView, isChecked);
-            }
-        });
 
 
         edt1 = findViewById(R.id.edt_1);
@@ -100,12 +81,17 @@ public class DialogCreate extends Dialog {
         txt1 = findViewById(R.id.txt_1);
         txt2 = findViewById(R.id.txt_2);
         txt3 = findViewById(R.id.txt_3);
+        edt1.setText("");
+        edt2.setText("");
+        edt3.setText("");
+
 
         findViewById(R.id.btn_accept).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (checkData()) {
                     onClickAccept.onAccept(edt1.getText().toString(), edt2.getText().toString(), edt3.getText().toString());
+                    dismiss();
                 }
             }
         });
@@ -118,11 +104,6 @@ public class DialogCreate extends Dialog {
         });
     }
 
-    private void doOnGameCharacterChanged(CompoundButton buttonView, boolean isChecked) {
-        RadioButton radio = (RadioButton) buttonView;
-
-        Log.i("TAG", "RadioButton " + radio.getText() + " : " + isChecked);
-    }
 
     private boolean checkData() {
 

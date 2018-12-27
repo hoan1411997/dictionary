@@ -7,6 +7,7 @@
     tools:context=".ui.activity.MainActivity">
 
     <LinearLayout
+        android:background="@color/grey200"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -32,18 +33,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginLeft="25px"
                 android:layout_weight="1"
-                android:gravity="center">
-
-                <TextView
-                    android:layout_width="25dp"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:maxLines="1"
-                    android:text="All"
-                    android:textColor="@color/white"
-                    android:textSize="18dp"
-                    android:textStyle="bold" />
-
+               >
 
                 <ImageView
 
@@ -51,7 +41,22 @@
                     android:layout_width="25dp"
                     android:layout_height="match_parent"
                     android:layout_marginRight="10dp"
+                    android:visibility="invisible"
                     android:src="@drawable/ic_arrow_drop_down_24dp" />
+
+                <TextView
+                    android:id="@+id/txt_title"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:text="All"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+
             </LinearLayout>
 
 
@@ -70,7 +75,7 @@
             android:layout_height="match_parent">
 
             <android.support.v7.widget.RecyclerView
-                android:id="@+id/rv_parking"
+                android:id="@+id/rsv_item"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
 
@@ -80,7 +85,7 @@
                 android:layout_height="50dp"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="true"
-                android:layout_margin="60px"
+                android:layout_margin="120px"
                 android:src="@drawable/ic_add_circle_black_24dp" />
         </RelativeLayout>
 

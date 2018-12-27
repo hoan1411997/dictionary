@@ -51,4 +51,21 @@ public class Vocabulary {
     public void setDesc(String desc) {
         this.desc = desc;
     }
+
+    public Vocabulary(Integer id, String content, Integer type, String desc) {
+        this.id = id;
+        this.content = content;
+        this.type = type;
+        this.desc = desc;
+    }
+
+    @Override
+    public String toString() {
+        return "{" +
+                "id:" + id +
+                ", content:'" + content  +
+                ", type:" + type +
+                ", desc:'" + desc  +
+                '}';
+    }
 }

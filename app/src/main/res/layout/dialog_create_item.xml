@@ -24,9 +24,10 @@
             <TextView
                 android:id="@+id/txt_1"
                 android:layout_width="200px"
-                android:layout_height="wrap_content"
+                android:padding="1px"
+                android:layout_height="match_parent"
                 android:layout_marginRight="12px"
-                android:text="Mã:" />
+                android:text="Nội dung:" />
 
             <EditText
                 android:id="@+id/edt_1"
@@ -46,14 +47,13 @@
                 android:layout_width="200px"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="12px"
-                android:text="Tên loại:" />
+                android:text="Loại:" />
 
-            <EditText
-                android:id="@+id/edt_2"
+
+            <Spinner
+                android:id="@+id/spinner1"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="text"
-                android:maxLines="1" />
+                android:layout_height="wrap_content" />
         </LinearLayout>
 
         <LinearLayout

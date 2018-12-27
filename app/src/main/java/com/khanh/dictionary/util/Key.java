@@ -46,4 +46,7 @@ public interface Key {
     int other = 6;
     int diennuoc = 7;
 
+    String DATA_VOCABULARY ="vocavularydata3" ;
+    String DATA_TYPE ="datatype3" ;
+    String DATA_STATE ="datastate" ;
 }
